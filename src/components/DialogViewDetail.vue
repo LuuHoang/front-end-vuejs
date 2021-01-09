@@ -9,7 +9,8 @@
           </div>
           <div class="header-detail-input">
             <div class="combo-header">
-              <input type="text" v-bind:value= getData[0].particular />
+              <!-- <input type="text" v-bind:value= getData[0].particular /> -->
+              <cus-el-element-select/>
             </div>
             <div class="combo-header">
               <div class="combo-header-text">
@@ -158,9 +159,12 @@
 </template>
 
 <script>
+import CusElElementSelect from '../components/cus-el-element-select.vue';
 export default {
   props: {
     // idPaymentOrReceipt: {
+    
+    CusElElementSelect,
     //   type: String,
     //   default: "",
     // },

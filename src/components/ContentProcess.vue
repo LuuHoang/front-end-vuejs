@@ -1,30 +1,8 @@
 <template>
-  <div class="content-banking">
-    <vue-header />
-    <div class="navigation-tabs">
-      <div class="menu">
-        <div class="tabs-position-top">
-            <div class="active-item" ><router-link to="/process">Quy trình</router-link></div> 
-            <div class="active-item" ><router-link to="/">Thu, chi tiền </router-link></div>
-            <div class="active-item">Đối chiếu ngân hàng</div>
-            <div class="active-item">Ngân hàng điện tử beta</div>
-            <div class="active-item">Báo cáo</div>
-        </div>
-        <div class="connect-bank">
-            <div class="connect-eb">
-                <div class="icon"></div>
-                <div class="label-connect">Kết nối ngân hàng điện tử</div>
-            </div>
-        </div>
-      </div>
-      <div class="deposit-withdraw-list">
-        <div class="header-list">
-            
-        </div>
-        <div class="body">
+        <div class="process">
             <div class="center-flex">
                 <div class="process-and-utility">
-                    <div class="process">
+                    <div class="process-title">
                         <div class="title">Nghiệp vụ tiền gửi</div>
                         <div class="content-img"></div>
                     </div>
@@ -73,108 +51,39 @@
                 </div>
             </div>
         </div>
-      </div>
-    </div>
-  </div>
 </template>
 
 <script>
-import Header from '../components/Header'
+
 export default {
-    components:{
-        "vue-header":Header,
-    },
 
 }
 </script>
 
-<style>
-.content-banking {
-  width: calc(100% - 164px);
-  height: 100%;
-  position: absolute;
-  right: 0;
-  background-color: #f1f1f1;
-}
-.navigation-tabs {
-  width: calc(100% - 15px);
-  height: calc(100% - 48px);
-  background-color: #f1f1f1;
-  position: absolute;
-  right: 0;
-}
-.menu {
-  width: 100%;
-  height: 62px;
-  background: #f1f1f1;
-  display: flex;
-  border-bottom: 2px solid #ccc;
-}
-.menu .tabs-position-top {
-    width: 70%;
-    height: 100%;
-    display: flex;
-}
-.tabs-position-top .active-item {
-    text-align: center;
-    padding-top: 33px;
-    width: auto;
-    padding-left: 24px;
-    padding-right: 14px;
-}
-.tabs-position-top .active-item:hover {
-    cursor: pointer;
-}
-.tabs-position-top .active-item a {
-    color: #000;
-    text-decoration: none;
-}
-.tabs-position-top .active-item a:hover {
-    color: #2ca01c;
-}
-.menu .connect-bank {
-    width: 30%;
-    height: 100%;
-    margin-right: 40px;
-}
-.connect-bank .connect-eb {
-    width: 65%;
-    height: 45%;
-    display: flex;
-    padding-top: 33px;
-    float: right;
-    color: #0075c0;
-}
-.connect-bank .connect-eb:hover {
-  cursor: pointer;
-}
+<style >
 
-.dictionary-content .connect-eb .label-connect {
-    padding-left: 10px;
-}
 /* -------- Css deposit-withdraw-list ----------*/
-.deposit-withdraw-list {
-  width: 100%;
-  height: calc(100% - 64px);
-  background-color: #fff;
-}
-.header-list {
-  height: 80px;
-  width: 100%;
-  background-color: #f1f1f1;
-}
-.body .center-flex {
-    width: 98%;
+.process {
     height: 100%;
-    margin-left: 12px;
+    width: 100%;
+    /* justify-content: center; */
+    place-items: center;
+    display: grid;
+    place-items: center;
+}
+.process .center-flex {
+    
+        margin-left: 12px;
     display: flex;
+    width: 900px;
+    height: 450px;
 }
 .center-flex .process-and-utility {
-    height: 100%;
+    height: 460px;
     width: 70%;
 }
-.process-and-utility .process {
-    height: 85%;
+.process-and-utility .process-title {
+    height: 83%;
     width: 100%;
     border:1px solid #ccc;
 }
@@ -191,10 +100,11 @@ export default {
     padding-top: 18px;
 
 }
-.process .content-img {
+.process-title .content-img {
     height: 88%;
     width: 100%;
     background-image: url('../assets/qt_TienGui.09015143.svg');
+    background-repeat: no-repeat;
 }
 .process-and-utility .dictionary {
     height: 13%;
@@ -274,7 +184,7 @@ export default {
 	height: 22px;
 }
 .center-flex .report {
-    height: 100%;
+    height: 454px;
     width: 30%;
     margin-left: 10px;
     border: 1px solid #ccc;
@@ -295,7 +205,7 @@ export default {
     height: 41px;
 }
 .report .footer-report {
-    height: 30px;
+    height: 13px;
     width: 100%;
     background-color:#fff;
     text-align: center;

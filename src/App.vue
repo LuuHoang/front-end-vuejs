@@ -1,32 +1,7 @@
 <template>
-  <div id="app" v-if="showDialog===0">
+  <div id="app" >
     <vue-sidebar />
     <router-view/>
-    <!--
-    <div class="content">
-      <vue-header/>
-      <div class="navigation-tabs">
-        <div class="menu">
-          <Dialog />
-        </div>
-        <div class="deposit-withdraw-list">
-          <div class="header-list"></div>
-    <div class="body">
-      <div class="data-table">
-         Nhận sự kiện từ Vue-Table rồi upload lại Trạng thái hiển thị  
-        <vue-table @showDialoged="showDialog=$event" />
-      </div>
-      <div class="vue-footer">
-        <vue-footer/>
-      </div>
-    </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="app" style="display: flex;height: 100vh;width: 100%;" v-else>
-     Gửi Khóa chính đến Dialog View-Detail ,và nhận lại các trạng thái hiển thị 
-    <dialog-view-detail v-bind:idPaymentOrReceipt="showDialog" @statusDialog="showDialog=$event" />-->
   </div>
 </template>
 
@@ -54,16 +29,6 @@ export default {
   },
   data(){
     return {
-      /**
-       * Hiển thị Dialog tùy từng trạng thái :
-       * Author:LVHOANG (03/11/2020)
-       */
-      showDialog:0,
-      /**
-       * Khóa chính của bảng thanh toán ,hóa đơn:
-       * Author:LVHOANG (03/11/2020)
-       */
-      idPaymentOrReceipt:'',
     }
   }
 };
